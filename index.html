@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>Banker's Algorithm</title>
 <link rel="stylesheet" href="bankers.css">
@@ -11,114 +10,45 @@
 <div class="wrapper">
 
 <header>
-
-<div>
 <h1>Banker's Algorithm</h1>
-<p>Deadlock Detection & Avoidance Simulator</p>
-</div>
 
 <div>
 <button onclick="runBanker()">Run Analysis</button>
 <button onclick="location.reload()">Reset</button>
 </div>
-
 </header>
 
-<div class="container">
-
-<!-- LEFT SIDE -->
-
-<div>
 
 <div class="card">
 
+<div class="card-header">
 <h2>Available Resources</h2>
-
-<div id="available">
-<input value="3">
-<input value="3">
-<input value="2">
+<button onclick="addResource()">+ Add Resource</button>
 </div>
+
+<div id="available"></div>
 
 </div>
 
 
 <div class="card">
 
+<div class="card-header">
 <h2>Process State Matrix</h2>
+<button onclick="addProcess()">+ Add Process</button>
+</div>
 
-<table id="table">
+<div class="table-container">
 
-<tr>
-<th>Process</th>
-<th colspan="3">Allocation</th>
-<th colspan="3">Max</th>
-</tr>
-
-<tr>
-<td>P0</td>
-<td><input value="0"></td>
-<td><input value="1"></td>
-<td><input value="0"></td>
-
-<td><input value="7"></td>
-<td><input value="5"></td>
-<td><input value="3"></td>
-</tr>
-
-<tr>
-<td>P1</td>
-<td><input value="2"></td>
-<td><input value="0"></td>
-<td><input value="0"></td>
-
-<td><input value="3"></td>
-<td><input value="2"></td>
-<td><input value="2"></td>
-</tr>
-
-<tr>
-<td>P2</td>
-<td><input value="3"></td>
-<td><input value="0"></td>
-<td><input value="2"></td>
-
-<td><input value="9"></td>
-<td><input value="0"></td>
-<td><input value="2"></td>
-</tr>
-
-<tr>
-<td>P3</td>
-<td><input value="2"></td>
-<td><input value="1"></td>
-<td><input value="1"></td>
-
-<td><input value="2"></td>
-<td><input value="2"></td>
-<td><input value="2"></td>
-</tr>
-
-<tr>
-<td>P4</td>
-<td><input value="0"></td>
-<td><input value="0"></td>
-<td><input value="2"></td>
-
-<td><input value="4"></td>
-<td><input value="3"></td>
-<td><input value="3"></td>
-</tr>
-
+<table>
+<thead id="tableHead"></thead>
+<tbody id="tableBody"></tbody>
 </table>
 
 </div>
 
 </div>
 
-<!-- RIGHT SIDE -->
-
-<div>
 
 <div class="card">
 
@@ -131,10 +61,6 @@
 
 <h3>Execution Steps</h3>
 <div id="steps"></div>
-
-</div>
-
-</div>
 
 </div>
 
